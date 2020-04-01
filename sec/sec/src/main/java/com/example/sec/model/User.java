@@ -135,6 +135,27 @@ super();
 	public void setMessages(Set<Message> messages) {
 		this.messages = messages;
 	}
+
+
+	@Override
+	public int hashCode() {
+		
+		return this.userId;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		
+		
+		if(obj==null || !(obj instanceof User) )
+			return false;
+		return this.userId==((User)obj).getUserId();
+	}
+
+
+	
+	
 	
 	
 	
